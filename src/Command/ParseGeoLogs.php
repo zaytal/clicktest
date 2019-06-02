@@ -5,6 +5,7 @@ namespace App\Command;
 
 use App\Controller\MetricsController;
 use App\Service\FileSystemExtended;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -12,6 +13,18 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class ParseGeoLogs extends Command
 {
+    /**
+     * @var EntityManagerInterface
+     */
+    private $em;
+
+    public function __construct(EntityManagerInterface $em)
+    {
+        $this->em = $em;
+
+        parent::__construct();
+    }
+
     protected function configure()
     {
         $this
@@ -31,7 +44,7 @@ class ParseGeoLogs extends Command
         $parse_path = (string)$input->getArgument('dir_src');
 
         $file_system = new FileSystemExtended();
-        $metrics_controller = new MetricsController($file_system);
+        $metrics_controller = new MetricsController($file_system, $this->em);
 
         $metrics_controller->processLogsFromFolder($parse_path);
 

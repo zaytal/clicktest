@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0db0624a-7916-4c4f-84e5-9887814f7cfc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Entity/GeoMetrics.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/GeoMetricsRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/clicktest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/clicktest.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Command/ParseGeoLogs.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/ParseGeoLogs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/MetricsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MetricsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/GeoMetrics.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/GeoMetrics.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/GeoMetricsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/GeoMetricsRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/FileSystemExtended.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/FileSystemExtended.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/vendor/composer/" />
     <ignored path="$PROJECT_DIR$/vendor/psr/cache/" />
@@ -51,6 +49,70 @@
   <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="click-test@127.0.0.1" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="click-test@127.0.0.1" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="click-test@127.0.0.1" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="click-test: database" type="6d9b600a:PostgresImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="click-test@127.0.0.1" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="click-test: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="click-test@127.0.0.1" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="click-test: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="click-test@127.0.0.1" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="click-test: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="click-test@127.0.0.1" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="click-test: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="geo_metrics: table" type="a93d6ac6:PostgresImplModel$LocalTable" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="FUSProjectUsageTrigger">
     <session id="2139990484">
       <usages-collector id="statistics.lifecycle.project">
@@ -65,24 +127,28 @@
           <entry key="" value="1" />
           <entry key="332ddsf" value="1" />
           <entry key="console" value="1" />
-          <entry key="csv" value="12" />
+          <entry key="csv" value="13" />
           <entry key="ddd" value="1" />
           <entry key="env" value="1" />
+          <entry key="geo_metrics" value="2" />
           <entry key="gitignore" value="3" />
           <entry key="json" value="1" />
           <entry key="lock" value="2" />
-          <entry key="log" value="2" />
-          <entry key="php" value="43" />
-          <entry key="yaml" value="9" />
+          <entry key="log" value="4" />
+          <entry key="php" value="62" />
+          <entry key="sql" value="2" />
+          <entry key="yaml" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key=".env file" value="1" />
+          <entry key="Database Element" value="2" />
           <entry key="JSON" value="2" />
-          <entry key="PHP" value="44" />
-          <entry key="PLAIN_TEXT" value="21" />
-          <entry key="YAML" value="9" />
+          <entry key="PHP" value="63" />
+          <entry key="PLAIN_TEXT" value="24" />
+          <entry key="Scratch" value="2" />
+          <entry key="YAML" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
@@ -92,21 +158,25 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="csv" value="79" />
+          <entry key="csv" value="82" />
           <entry key="dummy" value="34" />
           <entry key="env" value="10" />
           <entry key="gitignore" value="1" />
-          <entry key="log" value="29" />
-          <entry key="php" value="4700" />
-          <entry key="yaml" value="54" />
+          <entry key="log" value="48" />
+          <entry key="php" value="8619" />
+          <entry key="sql" value="101" />
+          <entry key="txt" value="10" />
+          <entry key="yaml" value="106" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="10" />
-          <entry key="PHP" value="4700" />
-          <entry key="PLAIN_TEXT" value="143" />
-          <entry key="YAML" value="54" />
+          <entry key="PHP" value="8617" />
+          <entry key="PLAIN_TEXT" value="175" />
+          <entry key="SQL" value="7" />
+          <entry key="Scratch" value="96" />
+          <entry key="YAML" value="106" />
         </counts>
       </usages-collector>
     </session>
@@ -114,19 +184,29 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.env">
+        <entry file="file://$PROJECT_DIR$/var/log/parse_logs_sql.log">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/84880f6f-9d04-4c82-93e1-4b7156e8deb5/console.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="26" column="63" selection-start-line="26" selection-start-column="63" selection-end-line="26" selection-end-column="63" />
+            <state relative-caret-position="153">
+              <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/var/log/parse_logs.log">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entity/GeoMetrics.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+            <state relative-caret-position="-1688">
+              <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
               <folding>
                 <element signature="e#30#62#0#PHP" expanded="true" />
               </folding>
@@ -134,25 +214,47 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Kernel.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Service/FileSystemExtended.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+            <state relative-caret-position="345">
+              <caret line="80" column="7" lean-forward="true" selection-start-line="80" selection-start-column="7" selection-end-line="80" selection-end-column="7" />
+              <folding>
+                <element signature="e#32#87#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/packages/doctrine_migrations.yaml">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/var/wrong_logs/1/12/121/geo_logs.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/packages/doctrine.yaml">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Command/ParseGeoLogs.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+            <state relative-caret-position="-192">
+              <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+              <folding>
+                <element signature="e#32#69#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/MetricsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="58" column="43" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
+              <folding>
+                <element signature="e#35#75#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -160,36 +262,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Repository/GeoMetricsRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="25" column="47" selection-end-line="34" />
+            <state relative-caret-position="238">
+              <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
               <folding>
-                <element signature="e#34#60#0#PHP" expanded="true" />
+                <element signature="e#34#68#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/EntityRepository.php">
+        <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/AbstractQuery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="72" column="6" selection-start-line="72" selection-start-column="6" selection-end-line="72" selection-end-column="6" />
+            <state relative-caret-position="219">
+              <caret line="920" selection-start-line="920" selection-end-line="920" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/composer.lock">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6567">
-              <caret line="3612" column="27" selection-start-line="3612" selection-start-column="27" selection-end-line="3612" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/packages/validator.yaml">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -213,20 +301,25 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/Command/ParseLogs.php" />
-        <option value="$PROJECT_DIR$/config/services.yaml" />
         <option value="$PROJECT_DIR$/var/clicklogs/geo_crack.csv" />
         <option value="$PROJECT_DIR$/var/clicklogs/geo_logs.csv" />
-        <option value="$PROJECT_DIR$/src/Service/FileSystemExtended.php" />
-        <option value="$PROJECT_DIR$/src/Command/ParseGeoLogs.php" />
         <option value="$PROJECT_DIR$/var/clicklogs/1/11/111/geo_logs111.csv" />
-        <option value="$PROJECT_DIR$/src/Controller/MetricsController.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/var/log/parse_logs.log" />
-        <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/src/Repository/GeoMetricsRepository.php" />
         <option value="$PROJECT_DIR$/src/Entity/GeoMetric.php" />
-        <option value="$PROJECT_DIR$/src/Entity/GeoMetrics.php" />
         <option value="$PROJECT_DIR$/config/packages/doctrine.yaml" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/config/services.yaml" />
+        <option value="$PROJECT_DIR$/src/Migrations/Version20190602122505.php" />
+        <option value="$PROJECT_DIR$/src/Entity/GeoMetrics.php" />
+        <option value="$PROJECT_DIR$/src/Migrations/Version20190602171749.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/84880f6f-9d04-4c82-93e1-4b7156e8deb5/console.sql" />
+        <option value="$PROJECT_DIR$/var/log/parse_logs.log" />
+        <option value="$PROJECT_DIR$/var/log/parse_logs_sql.log" />
+        <option value="$PROJECT_DIR$/src/Command/ParseGeoLogs.php" />
+        <option value="$PROJECT_DIR$/src/Repository/GeoMetricsRepository.php" />
+        <option value="$PROJECT_DIR$/var/wrong_logs/1/12/121/geo_logs.csv" />
+        <option value="$PROJECT_DIR$/src/Controller/MetricsController.php" />
+        <option value="$PROJECT_DIR$/src/Service/FileSystemExtended.php" />
       </list>
     </option>
   </component>
@@ -292,8 +385,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/doctrine-bridge" />
       <path value="$PROJECT_DIR$/vendor/symfony/validator" />
       <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/maker-bundle" />
-      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -335,6 +426,12 @@
               <item name="clicktest" type="b2602c69:ProjectViewProjectNode" />
               <item name="clicktest" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clicktest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clicktest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -349,6 +446,93 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Repository" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="clicktest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clicktest" type="462c0819:PsiDirectoryNode" />
+              <item name="var" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clicktest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clicktest" type="462c0819:PsiDirectoryNode" />
+              <item name="var" type="462c0819:PsiDirectoryNode" />
+              <item name="clicklogs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clicktest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clicktest" type="462c0819:PsiDirectoryNode" />
+              <item name="var" type="462c0819:PsiDirectoryNode" />
+              <item name="log" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clicktest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clicktest" type="462c0819:PsiDirectoryNode" />
+              <item name="var" type="462c0819:PsiDirectoryNode" />
+              <item name="wrong_logs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clicktest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clicktest" type="462c0819:PsiDirectoryNode" />
+              <item name="var" type="462c0819:PsiDirectoryNode" />
+              <item name="wrong_logs" type="462c0819:PsiDirectoryNode" />
+              <item name="1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clicktest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clicktest" type="462c0819:PsiDirectoryNode" />
+              <item name="var" type="462c0819:PsiDirectoryNode" />
+              <item name="wrong_logs" type="462c0819:PsiDirectoryNode" />
+              <item name="1" type="462c0819:PsiDirectoryNode" />
+              <item name="11" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clicktest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clicktest" type="462c0819:PsiDirectoryNode" />
+              <item name="var" type="462c0819:PsiDirectoryNode" />
+              <item name="wrong_logs" type="462c0819:PsiDirectoryNode" />
+              <item name="1" type="462c0819:PsiDirectoryNode" />
+              <item name="12" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clicktest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clicktest" type="462c0819:PsiDirectoryNode" />
+              <item name="var" type="462c0819:PsiDirectoryNode" />
+              <item name="wrong_logs" type="462c0819:PsiDirectoryNode" />
+              <item name="1" type="462c0819:PsiDirectoryNode" />
+              <item name="12" type="462c0819:PsiDirectoryNode" />
+              <item name="121" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clicktest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clicktest" type="462c0819:PsiDirectoryNode" />
+              <item name="var" type="462c0819:PsiDirectoryNode" />
+              <item name="wrong_logs" type="462c0819:PsiDirectoryNode" />
+              <item name="2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clicktest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clicktest" type="462c0819:PsiDirectoryNode" />
+              <item name="var" type="462c0819:PsiDirectoryNode" />
+              <item name="wrong_logs" type="462c0819:PsiDirectoryNode" />
+              <item name="2" type="462c0819:PsiDirectoryNode" />
+              <item name="21" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clicktest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clicktest" type="462c0819:PsiDirectoryNode" />
+              <item name="var" type="462c0819:PsiDirectoryNode" />
+              <item name="wrong_logs" type="462c0819:PsiDirectoryNode" />
+              <item name="2" type="462c0819:PsiDirectoryNode" />
+              <item name="21" type="462c0819:PsiDirectoryNode" />
+              <item name="212" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clicktest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clicktest" type="462c0819:PsiDirectoryNode" />
+              <item name="var" type="462c0819:PsiDirectoryNode" />
+              <item name="wrong_logs" type="462c0819:PsiDirectoryNode" />
+              <item name="2" type="462c0819:PsiDirectoryNode" />
+              <item name="22" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -356,12 +540,14 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/zayta/clicktest/vendor/symfony/framework-bundle/Controller/AbstractController.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/symfony_01" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/PhpstormProjects/plaify" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="database.main" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -395,20 +581,21 @@
       <option name="presentableId" value="Default" />
       <updated>1559374180412</updated>
       <workItem from="1559374181577" duration="37025000" />
-      <workItem from="1559416673792" duration="13922000" />
+      <workItem from="1559416673792" duration="37876000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50947000" />
+    <option name="totallyTimeSpent" value="74901000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4978903" visible="true" weight="0.24547283" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4978903" visible="true" weight="0.18309858" />
       <window_info id="Structure" order="1" sideWeight="0.5021097" side_tool="true" weight="0.24211939" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Database Console" weight="0.3286119" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -417,14 +604,14 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3286119" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Database" order="3" weight="0.1965124" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -463,57 +650,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/var/clicklogs/test.ddd">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/var/clicklogs/.332ddsf">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/var/clicklogs/dsfsd.">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_7.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="649" column="9" selection-start-line="649" selection-start-column="9" selection-end-line="649" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/var/clicklogs/geo_logs.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="30" lean-forward="true" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/var/clicklogs/geo_crack.csv" />
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/filesystem/Filesystem.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="644" column="24" selection-start-line="644" selection-start-column="19" selection-end-line="644" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/console/Command/Command.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="68" column="20" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/var/clicklogs/2/21/212/geo_logs212.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/var/clicklogs/2/21/geo_logs21.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/var/clicklogs/1/12/121/geo_logs121.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/var/clicklogs/1/11/111/geo_crack11.csv" />
-    <entry file="file://$PROJECT_DIR$/var/clicklogs/2/22/geo_logs22.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/var/clicklogs/2/21/212/geo_crack2.csv" />
     <entry file="file://$PROJECT_DIR$/var/clicklogs/1/11/geo_crack1.csv" />
     <entry file="file://$PROJECT_DIR$/src/Controller/.gitignore">
@@ -567,47 +703,10 @@
     <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_namespaces.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/services.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/var/clicklogs/1/11/111/geo_logs111.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Command/ParseGeoLogs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="18" column="41" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="41" />
-          <folding>
-            <element signature="e#32#69#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Service/FileSystemExtended.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="60" column="23" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
-          <folding>
-            <element signature="e#32#87#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/MetricsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="42" column="57" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
-          <folding>
-            <element signature="e#35#70#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -618,20 +717,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/var/log/parse_logs.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-68">
           <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6567">
-          <caret line="3612" column="27" selection-start-line="3612" selection-start-column="27" selection-end-line="3612" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -659,32 +748,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="26" column="63" selection-start-line="26" selection-start-column="63" selection-end-line="26" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/packages/doctrine_migrations.yaml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/EntityRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="72" column="6" selection-start-line="72" selection-start-column="6" selection-end-line="72" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Repository/GeoMetricsRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="25" column="47" selection-end-line="34" />
-          <folding>
-            <element signature="e#34#60#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/symfony.lock">
       <provider selected="true" editor-type-id="text-editor">
@@ -728,20 +793,178 @@
     <entry file="file://$PROJECT_DIR$/config/packages/framework.yaml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/doctrine.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="3118" column="30" selection-start-line="3118" selection-start-column="30" selection-end-line="3118" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/EntityRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="50" column="14" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/framework-bundle/Controller/ControllerTrait.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="343" column="45" lean-forward="true" selection-start-line="343" selection-start-column="45" selection-end-line="343" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/psr/container/src/ContainerInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/console/Command/Command.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="68" column="20" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/services.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Migrations/Version20190602165224.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="22" lean-forward="true" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Migrations/Version20190602165306.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Migrations/Version20190602122505.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="24" column="57" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Migrations/Version20190602153749.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11">
+          <caret line="21" column="49" lean-forward="true" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Migrations/Version20190602171749.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://84880f6f-9d04-4c82-93e1-4b7156e8deb5/database/click-test/schema/public/table/geo_metrics">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/84880f6f-9d04-4c82-93e1-4b7156e8deb5/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/AbstractQuery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="920" selection-start-line="920" selection-end-line="920" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/var/log/parse_logs.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/var/log/parse_logs_sql.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Command/ParseGeoLogs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-192">
+          <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+          <folding>
+            <element signature="e#32#69#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/var/wrong_logs/1/12/121/geo_logs.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/GeoMetrics.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        <state relative-caret-position="-1688">
+          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
           <folding>
             <element signature="e#30#62#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/doctrine.yaml">
+    <entry file="file://$PROJECT_DIR$/src/Repository/GeoMetricsRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        <state relative-caret-position="238">
+          <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+          <folding>
+            <element signature="e#34#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/MetricsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="58" column="43" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
+          <folding>
+            <element signature="e#35#75#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Service/FileSystemExtended.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="80" column="7" lean-forward="true" selection-start-line="80" selection-start-column="7" selection-end-line="80" selection-end-column="7" />
+          <folding>
+            <element signature="e#32#87#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

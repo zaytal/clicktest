@@ -43,7 +43,7 @@ class GeoMetrics
     private $impressions;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="float")
      * @Assert\NotBlank()
      */
     private $revenue;

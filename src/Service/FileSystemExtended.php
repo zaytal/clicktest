@@ -8,6 +8,15 @@ use Symfony\Component\Filesystem\Filesystem;
 
 class FileSystemExtended extends Filesystem
 {
+    /**
+     * Получить файлы из директории.
+     * Если задан $extensions, то вернуть только файлы с указанными расширениями.
+     *
+     * @param String $dir_src
+     * @param array  $extensions
+     *
+     * @return array
+     */
     public function scanDir(String $dir_src, $extensions = []) :array
     {
         if(!$this->exists($dir_src)) {
@@ -28,6 +37,14 @@ class FileSystemExtended extends Filesystem
         return $all_directory_files;
     }
 
+    /**
+     * Получить все файлы из директории и вложенных поддиректорий
+     * Рекурсивный.
+     *
+     * @param String $dir Дескриптор директории
+     *
+     * @return array
+     */
     public function getDirFiles(String $dir) :array
     {
         $result = [];
@@ -57,12 +74,19 @@ class FileSystemExtended extends Filesystem
             }
         }
 
-        // Возвращаем файлы собранные на этой итерации
+        // Возвращаем файлы собранные на текущей итерации
         return $result;
     }
 
-    public function is_dir($dir) :bool
+    /**
+     * Проверяет, является ли указанный путь, дескриптором папки.
+     *
+     * @param String $src Путь к объекту
+     *
+     * @return bool
+     */
+    public function is_dir(String $src) :bool
     {
-        return is_dir($dir);
+        return is_dir($src);
     }
 }

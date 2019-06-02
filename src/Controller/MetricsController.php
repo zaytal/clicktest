@@ -3,50 +3,79 @@
 namespace App\Controller;
 
 
+use App\Repository\GeoMetricsRepository;
 use App\Service\FileSystemExtended;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class MetricsController extends AbstractController
 {
     private $file_system;
+    /**
+     * @var \Doctrine\Common\Persistence\ObjectManager
+     */
+    private $entityManager;
+    /**
+     * @var GeoMetricsRepository
+     */
+    private $metricsRepository;
+
     public $error = false;
     public $error_messages = [];
 
-    const GEO_HEADERS = ['date', 'geo', 'zone', 'impressions', 'revenue'];
-    const GEO_FIELDS_TYPES = [
+    /**
+     * Поддерживаемые разрешения
+     */
+    private const GEO_LOGS_EXTENSIONS = ['csv'];
+    private const GEO_HEADERS = ['date', 'geo', 'zone', 'impressions', 'revenue'];
+    private const GEO_FIELDS_TYPES = [
         'date'        => 'date#YYYY-MM-DD',
         'geo'         => 'string#2',
         'zone'        => 'string#7',
         'impressions' => 'int',
         'revenue'     => 'float',
     ];
-    const GEO_GROUP_BY_CNT_FIELDS = 3;
-    const DATA_DELIMITER = ',';
+    private const GEO_GROUP_BY_CNT_FIELDS = 3;
+
+    public const DATA_DELIMITER = ',';
+    public const DB_PROCESSING_STEP = 1000;
 
 
-    public function __construct(FileSystemExtended $file_system)
+    public function __construct(FileSystemExtended $file_system, EntityManagerInterface $entityManager)
     {
         $this->file_system = $file_system;
+        $this->entityManager = $entityManager;
+        $this->metricsRepository = $entityManager->getRepository("App\Entity\GeoMetrics");
     }
 
-    public function processLogsFromFolder(String$dir_src)
+    /**
+     * Обработать все логи из указанной директории.
+     * Записать их в таблицу логов.
+     *
+     * @param String $dir_src
+     */
+    public function processLogsFromFolder(String $dir_src) :void
     {
-        $dir_files = $this->file_system->scanDir($dir_src, ['csv']);
+        $dir_files = $this->file_system->scanDir($dir_src, self::GEO_LOGS_EXTENSIONS);
 
-        file_put_contents("/home/vagrant/clicktest/var/log/parse_logs.log",
-            "dir_files: " . print_r($dir_files, true) . "\r\n", FILE_APPEND);
         if(!empty($dir_files)) {
             $parsed_data = $this->parseCSVFiles($dir_files);
-            //@todo сохранить сгруппированные данные в базу
 
-            file_put_contents("/home/vagrant/clicktest/var/log/parse_logs.log",
-                "parsed_data: " . print_r($parsed_data, true) . "\r\n", FILE_APPEND);
+            $this->upsertGeoMetricsTable($parsed_data);
         } else {
             $this->error = true;
             $this->error_messages[] = sprintf("В запрошенной папке %s нет файлов метрики с расширением .csv", $dir_src);
         }
     }
 
+    /**
+     * Парсим все файлы из переданного списка методом fgetcsv и группируем результат.
+     * Сохраняет возникающие ошибки для дальнейшего вывода.
+     *
+     * @param array $files_descriptors Список дескрипторов файлов, которые надо распарсить.
+     *
+     * @return array Сгруппированные данные из предложенных файлов
+     */
     public function parseCSVFiles($files_descriptors) :array
     {
         if(empty($files_descriptors)) {
@@ -60,10 +89,10 @@ class MetricsController extends AbstractController
             $processing_row = 1;
             if (($handle = fopen($file_src, "r")) !== false) {
                 while (($row_data = fgetcsv($handle, 1000, self::DATA_DELIMITER)) !== false) {
+                    // Если заголовки файла неверно указаны, значит считаем весь файл невалидным
                     if($processing_row == 1 && $row_data != self::GEO_HEADERS){
                         $this->error = true;
                         $this->error_messages[] = sprintf("Файл метрики %s имеет неверные заголовки", $file_src);
-                        // Если заголовки файла неверно указаны, значит считаем весь файл невалидным
                         break;
                     }
 
@@ -74,7 +103,7 @@ class MetricsController extends AbstractController
                             $file_data[] = $row_data;
                         } else {
                             $this->error = true;
-                            $this->error_messages[] = sprintf("Строка номер %d имеет неверный формат", $processing_row);
+                            $this->error_messages[] = sprintf("Строка номер %d имеет неверный формат. Файл %s.", $processing_row, $file_src);
                         }
                     }
 
@@ -94,11 +123,18 @@ class MetricsController extends AbstractController
             $merged_files_data = array_merge($merged_files_data, $file_data);
         }
 
-        $files_data = $this->groupByFirstFields($merged_files_data);
+        $files_data = array_values($this->groupByFirstFields($merged_files_data));
 
         return $files_data;
     }
 
+    /**
+     * Проверяем строку из файла на валидность
+     *
+     * @param array $fields Поля строки
+     *
+     * @return bool Результат валидации: false - невалидно, true - валидно
+     */
     public function is_valid($fields) :bool
     {
         $is_valid = true;
@@ -162,7 +198,13 @@ class MetricsController extends AbstractController
         return $is_valid;
     }
 
-    public function normalize(&$fields)
+    /**
+     * Нормализовать данные в массиве с учётом заданных типов.
+     * Исходные данные при парсинге являются строками. Чтобы с ними можно было работать их нужно привести к соответствующим типам
+     *
+     * @param $fields
+     */
+    public function normalize(&$fields) :void
     {
         foreach($fields as $key => &$field) {
             $rules = explode("#", self::GEO_FIELDS_TYPES[self::GEO_HEADERS[$key]]);
@@ -177,8 +219,22 @@ class MetricsController extends AbstractController
         }
     }
 
+    /**
+     * Сгруппировать данные по первым N полям.
+     *
+     *
+     * @param array $data_fields Сырые данные для группировки.
+     * @param int   $cnt_fields  Число полей для группировки.
+     *                           Если $cnt_fields равен 0, NULL или больше чем полей в массиве, то вернуть исходные данные без группировки.
+     *
+     * @return array Сгруппированный массив
+     */
     public function groupByFirstFields($data_fields, int $cnt_fields = self::GEO_GROUP_BY_CNT_FIELDS) :array
     {
+        if($cnt_fields == 0 || is_null($cnt_fields) || $cnt_fields >= count($data_fields)) {
+            return $data_fields;
+        }
+
         $grouped_data = [];
         foreach ($data_fields as $fields) {
             $group_key = $this->genGroupKey($fields);
@@ -194,7 +250,15 @@ class MetricsController extends AbstractController
         return $grouped_data;
     }
 
-    public function genGroupKey($fields, $cnt_fields = self::GEO_GROUP_BY_CNT_FIELDS)
+    /**
+     * Генерация ключа, по которому будет производиться сравнение и группировка
+     *
+     * @param array $fields
+     * @param int   $cnt_fields
+     *
+     * @return string Сгенерированный ключ
+     */
+    public function genGroupKey($fields, int $cnt_fields = self::GEO_GROUP_BY_CNT_FIELDS) :string
     {
         $group_key = '';
         for($i = 0; $i <= $cnt_fields - 1; $i++) {
@@ -202,5 +266,49 @@ class MetricsController extends AbstractController
         }
 
         return $group_key;
+    }
+
+    /**
+     * Сохранить/обновить финальные сгруппированные значения в таблицу
+     *
+     * @param array $parsed_data Финальные сгруппированные данные
+     */
+    public function upsertGeoMetricsTable($parsed_data) :void
+    {
+        $count_left = count($parsed_data);
+        $offset = 0;
+        $portion = 1;
+        while ($count_left > 0) {
+            $process_data_part = $this->getArrayPart($parsed_data, $offset, self::DB_PROCESSING_STEP);
+            $upserting_result = $this->metricsRepository->upsertGeoMetrics($process_data_part);
+
+            if(!$upserting_result) {
+                $this->error = true;
+                $this->error_messages[] = sprintf("Произошла непредвиденная ошибка при обработке %d-й порции", $portion);
+            }
+
+            $offset += self::DB_PROCESSING_STEP;
+            $count_left -= self::DB_PROCESSING_STEP;
+            $portion++;
+        }
+
+    }
+
+    /**
+     * Взять часть данных из массива. Используется для пагинации по масссиву.
+     *
+     * @param array $arr    Исходный массив
+     * @param int   $offset Смещение
+     * @param int   $limit  Вернуть число элементов
+     *
+     * @return array Обрезанный массив
+     */
+    public function getArrayPart($arr, int $offset, int $limit) :array
+    {
+        if(empty($arr)) {
+            return [];
+        }
+
+        return array_slice($arr, $offset, $limit);
     }
 }
