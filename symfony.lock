@@ -218,6 +218,22 @@
     "symfony/stopwatch": {
         "version": "v4.3.0"
     },
+    "symfony/translation-contracts": {
+        "version": "v1.1.2"
+    },
+    "symfony/validator": {
+        "version": "4.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "4.3",
+            "ref": "48a8e5ef925e82aa7d665c887cd1fa60f8b7921d"
+        },
+        "files": [
+            "./config/packages/test/validator.yaml",
+            "./config/packages/validator.yaml"
+        ]
+    },
     "symfony/var-exporter": {
         "version": "v4.3.0"
     },
