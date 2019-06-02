@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0db0624a-7916-4c4f-84e5-9887814f7cfc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/clicktest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/clicktest.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Command/ParseGeoLogs.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/ParseGeoLogs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/MetricsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MetricsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/GeoMetrics.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/GeoMetrics.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/GeoMetricsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/GeoMetricsRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/FileSystemExtended.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/FileSystemExtended.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/vendor/composer/" />
     <ignored path="$PROJECT_DIR$/vendor/psr/cache/" />
@@ -217,8 +215,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Service/FileSystemExtended.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="80" column="7" lean-forward="true" selection-start-line="80" selection-start-column="7" selection-end-line="80" selection-end-column="7" />
+            <state relative-caret-position="226">
+              <caret line="73" column="13" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
               <folding>
                 <element signature="e#32#87#0#PHP" expanded="true" />
               </folding>
@@ -230,7 +228,7 @@
         <entry file="file://$PROJECT_DIR$/var/wrong_logs/1/12/121/geo_logs.csv">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+              <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -239,7 +237,7 @@
         <entry file="file://$PROJECT_DIR$/src/Command/ParseGeoLogs.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-192">
-              <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+              <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
               <folding>
                 <element signature="e#32#69#0#PHP" expanded="true" />
               </folding>
@@ -263,7 +261,7 @@
         <entry file="file://$PROJECT_DIR$/src/Repository/GeoMetricsRepository.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+              <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
               <folding>
                 <element signature="e#34#68#0#PHP" expanded="true" />
               </folding>
@@ -385,6 +383,8 @@
       <path value="$PROJECT_DIR$/vendor/symfony/doctrine-bridge" />
       <path value="$PROJECT_DIR$/vendor/symfony/validator" />
       <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/vendor/bin/.phpunit" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -581,18 +581,17 @@
       <option name="presentableId" value="Default" />
       <updated>1559374180412</updated>
       <workItem from="1559374181577" duration="37025000" />
-      <workItem from="1559416673792" duration="37876000" />
+      <workItem from="1559416673792" duration="38746000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74901000" />
+    <option name="totallyTimeSpent" value="75771000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4978903" visible="true" weight="0.18309858" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4978903" visible="true" weight="0.18309858" />
       <window_info id="Structure" order="1" sideWeight="0.5021097" side_tool="true" weight="0.24211939" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" weight="0.3286119" />
@@ -606,7 +605,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3286119" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -914,7 +913,7 @@
     <entry file="file://$PROJECT_DIR$/src/Command/ParseGeoLogs.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-192">
-          <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
           <folding>
             <element signature="e#32#69#0#PHP" expanded="true" />
           </folding>
@@ -924,7 +923,7 @@
     <entry file="file://$PROJECT_DIR$/var/wrong_logs/1/12/121/geo_logs.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -941,7 +940,7 @@
     <entry file="file://$PROJECT_DIR$/src/Repository/GeoMetricsRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
           <folding>
             <element signature="e#34#68#0#PHP" expanded="true" />
           </folding>
@@ -960,8 +959,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Service/FileSystemExtended.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="80" column="7" lean-forward="true" selection-start-line="80" selection-start-column="7" selection-end-line="80" selection-end-column="7" />
+        <state relative-caret-position="226">
+          <caret line="73" column="13" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
           <folding>
             <element signature="e#32#87#0#PHP" expanded="true" />
           </folding>
