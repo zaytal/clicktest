@@ -2,13 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0db0624a-7916-4c4f-84e5-9887814f7cfc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Controller/MetricsControllerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Service/FileSystemExtendedTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_data/clicklogs/.332ddsf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_data/clicklogs/1/11/111/geo_logs111.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_data/clicklogs/1/12/121/geo_logs121.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_data/clicklogs/2/21/212/geo_logs212.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_data/clicklogs/2/21/geo_logs21.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_data/clicklogs/2/22/geo_logs22.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_data/clicklogs/dsfsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_data/clicklogs/geo_logs.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_data/clicklogs/test.ddd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_data/no_logs/.332ddsf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_data/no_logs/1/.332ddsf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_data/no_logs/2/test.ddd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_data/no_logs/dsfsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_data/no_logs/test.ddd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_data/wrong_logs/.332ddsf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_data/wrong_logs/1/11/111/geo_crack11.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_data/wrong_logs/1/11/111/geo_logs.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_data/wrong_logs/1/12/121/geo_logs.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_data/wrong_logs/2/21/212/geo_logs.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_data/wrong_logs/2/21/geo_logs.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_data/wrong_logs/2/22/geo_logs.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_data/wrong_logs/dsfsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_data/wrong_logs/geo_crack.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_data/wrong_logs/geo_logs.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_data/wrong_logs/test.ddd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/clicktest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/clicktest.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/MetricsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MetricsController.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/vendor/composer/" />
     <ignored path="$PROJECT_DIR$/vendor/psr/cache/" />
@@ -123,17 +147,18 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="" value="1" />
-          <entry key="332ddsf" value="1" />
+          <entry key="332ddsf" value="2" />
           <entry key="console" value="1" />
-          <entry key="csv" value="13" />
-          <entry key="ddd" value="1" />
+          <entry key="csv" value="21" />
+          <entry key="ddd" value="2" />
+          <entry key="dsfsd" value="1" />
           <entry key="env" value="1" />
           <entry key="geo_metrics" value="2" />
-          <entry key="gitignore" value="3" />
-          <entry key="json" value="1" />
-          <entry key="lock" value="2" />
+          <entry key="gitignore" value="6" />
+          <entry key="json" value="2" />
+          <entry key="lock" value="4" />
           <entry key="log" value="4" />
-          <entry key="php" value="62" />
+          <entry key="php" value="68" />
           <entry key="sql" value="2" />
           <entry key="yaml" value="10" />
         </counts>
@@ -142,16 +167,16 @@
         <counts>
           <entry key=".env file" value="1" />
           <entry key="Database Element" value="2" />
-          <entry key="JSON" value="2" />
-          <entry key="PHP" value="63" />
-          <entry key="PLAIN_TEXT" value="24" />
+          <entry key="JSON" value="4" />
+          <entry key="PHP" value="69" />
+          <entry key="PLAIN_TEXT" value="39" />
           <entry key="Scratch" value="2" />
           <entry key="YAML" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
         <counts>
-          <entry key="PHP Class.type" value="2" />
+          <entry key="PHP Class.type" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -159,9 +184,9 @@
           <entry key="csv" value="82" />
           <entry key="dummy" value="34" />
           <entry key="env" value="10" />
-          <entry key="gitignore" value="1" />
+          <entry key="gitignore" value="3" />
           <entry key="log" value="48" />
-          <entry key="php" value="8619" />
+          <entry key="php" value="9767" />
           <entry key="sql" value="101" />
           <entry key="txt" value="10" />
           <entry key="yaml" value="106" />
@@ -170,8 +195,8 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="10" />
-          <entry key="PHP" value="8617" />
-          <entry key="PLAIN_TEXT" value="175" />
+          <entry key="PHP" value="9765" />
+          <entry key="PLAIN_TEXT" value="177" />
           <entry key="SQL" value="7" />
           <entry key="Scratch" value="96" />
           <entry key="YAML" value="106" />
@@ -182,28 +207,9 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/var/log/parse_logs_sql.log">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/84880f6f-9d04-4c82-93e1-4b7156e8deb5/console.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/var/log/parse_logs.log">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entity/GeoMetrics.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1688">
+            <state relative-caret-position="-1920">
               <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
               <folding>
                 <element signature="e#30#62#0#PHP" expanded="true" />
@@ -212,34 +218,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Service/FileSystemExtended.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="73" column="13" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
-              <folding>
-                <element signature="e#32#87#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/var/wrong_logs/1/12/121/geo_logs.csv">
+        <entry file="file://$PROJECT_DIR$/tests/Controller/MetricsControllerTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Command/ParseGeoLogs.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-192">
-              <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+            <state relative-caret-position="357">
+              <caret line="21" column="88" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="88" />
               <folding>
-                <element signature="e#32#69#0#PHP" expanded="true" />
+                <element signature="e#50#87#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -248,8 +233,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/MetricsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="58" column="43" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
+            <state relative-caret-position="556">
+              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
               <folding>
                 <element signature="e#35#75#0#PHP" expanded="true" />
               </folding>
@@ -258,22 +243,49 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Repository/GeoMetricsRepository.php">
+        <entry file="file://$PROJECT_DIR$/src/Service/FileSystemExtended.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+            <state relative-caret-position="369">
+              <caret line="80" column="7" lean-forward="true" selection-start-line="80" selection-start-column="7" selection-end-line="80" selection-end-column="7" />
               <folding>
-                <element signature="e#34#68#0#PHP" expanded="true" />
+                <element signature="e#32#87#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/Service/FileSystemExtendedTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="39" lean-forward="true" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+              <folding>
+                <element signature="e#38#75#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/AbstractQuery.php">
+        <entry file="file://$PROJECT_DIR$/src/Command/ParseGeoLogs.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="920" selection-start-line="920" selection-end-line="920" />
+            <state relative-caret-position="250">
+              <caret line="44" selection-start-line="44" selection-end-line="44" />
+              <folding>
+                <element signature="e#32#69#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Repository/GeoMetricsRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+              <folding>
+                <element signature="e#34#68#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -302,7 +314,6 @@
         <option value="$PROJECT_DIR$/var/clicklogs/geo_crack.csv" />
         <option value="$PROJECT_DIR$/var/clicklogs/geo_logs.csv" />
         <option value="$PROJECT_DIR$/var/clicklogs/1/11/111/geo_logs111.csv" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/Entity/GeoMetric.php" />
         <option value="$PROJECT_DIR$/config/packages/doctrine.yaml" />
         <option value="$PROJECT_DIR$/.env" />
@@ -316,8 +327,14 @@
         <option value="$PROJECT_DIR$/src/Command/ParseGeoLogs.php" />
         <option value="$PROJECT_DIR$/src/Repository/GeoMetricsRepository.php" />
         <option value="$PROJECT_DIR$/var/wrong_logs/1/12/121/geo_logs.csv" />
-        <option value="$PROJECT_DIR$/src/Controller/MetricsController.php" />
         <option value="$PROJECT_DIR$/src/Service/FileSystemExtended.php" />
+        <option value="$PROJECT_DIR$/composer.lock" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/tests/test_data/Controller/MetricsControllerTest.php" />
+        <option value="$PROJECT_DIR$/tests/Controller/MetricsControllerTest.php" />
+        <option value="$PROJECT_DIR$/src/Controller/MetricsController.php" />
+        <option value="$PROJECT_DIR$/tests/Service/FileSystemExtendedTest.php" />
       </list>
     </option>
   </component>
@@ -383,8 +400,8 @@
       <path value="$PROJECT_DIR$/vendor/symfony/doctrine-bridge" />
       <path value="$PROJECT_DIR$/vendor/symfony/validator" />
       <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
       <path value="$PROJECT_DIR$/vendor/bin/.phpunit" />
+      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -438,24 +455,35 @@
               <item name="clicktest" type="b2602c69:ProjectViewProjectNode" />
               <item name="clicktest" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clicktest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clicktest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Repository" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="clicktest" type="b2602c69:ProjectViewProjectNode" />
               <item name="clicktest" type="462c0819:PsiDirectoryNode" />
-              <item name="var" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clicktest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clicktest" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clicktest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clicktest" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clicktest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clicktest" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="test_data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="clicktest" type="b2602c69:ProjectViewProjectNode" />
               <item name="clicktest" type="462c0819:PsiDirectoryNode" />
               <item name="var" type="462c0819:PsiDirectoryNode" />
-              <item name="clicklogs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="clicktest" type="b2602c69:ProjectViewProjectNode" />
@@ -550,12 +578,15 @@
     <property name="settings.editor.selected.configurable" value="database.main" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\zayta\clicktest\tests" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\zayta\clicktest\tests\test_data\no_logs\2" />
+      <recent name="C:\Users\zayta\clicktest\tests\test_data\no_logs\1" />
+      <recent name="C:\Users\zayta\clicktest\tests\test_data\no_logs" />
+      <recent name="C:\Users\zayta\clicktest\tests\test_data" />
       <recent name="C:\Users\zayta\clicktest\src\Repository" />
-      <recent name="C:\Users\zayta\clicktest\src\Entity" />
-      <recent name="C:\Users\zayta\clicktest\var\wrong_logs" />
-      <recent name="C:\Users\zayta\clicktest\src\Controller" />
-      <recent name="C:\Users\zayta\clicktest\var\clicklogs\1\11\111" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -581,15 +612,16 @@
       <option name="presentableId" value="Default" />
       <updated>1559374180412</updated>
       <workItem from="1559374181577" duration="37025000" />
-      <workItem from="1559416673792" duration="38746000" />
+      <workItem from="1559416673792" duration="44552000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75771000" />
+    <option name="totallyTimeSpent" value="81577000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4978903" visible="true" weight="0.18309858" />
       <window_info id="Structure" order="1" sideWeight="0.5021097" side_tool="true" weight="0.24211939" />
@@ -605,7 +637,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3286119" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -649,80 +681,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/var/clicklogs/2/21/212/geo_crack2.csv" />
-    <entry file="file://$PROJECT_DIR$/var/clicklogs/1/11/geo_crack1.csv" />
-    <entry file="file://$PROJECT_DIR$/src/Controller/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/http-foundation/JsonResponse.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/framework-bundle/Controller/AbstractController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="36" column="15" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/SPL/SPL.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/dotenv/Exception/FormatException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/framework-bundle/Controller/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="21" column="99" selection-start-line="21" selection-start-column="81" selection-end-line="21" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/var/wrong_logs/1/11/111/geo_logs.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/pcre/pcre.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="82" column="9" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_namespaces.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/var/clicklogs/1/11/111/geo_logs111.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/packages/validator.yaml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -749,11 +707,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/packages/doctrine_migrations.yaml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/symfony.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3882" />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Repository/GeoMetricRepository.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -796,13 +749,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="3118" column="30" selection-start-line="3118" selection-start-column="30" selection-end-line="3118" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -910,26 +856,48 @@
     <entry file="file://$PROJECT_DIR$/var/log/parse_logs_sql.log">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Command/ParseGeoLogs.php">
+    <entry file="file://$PROJECT_DIR$/tests/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_data/clicklogs/1/11/111/geo_logs111.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-192">
-          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-          <folding>
-            <element signature="e#32#69#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3162" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="2683" column="40" selection-start-line="2683" selection-start-column="40" selection-end-line="2683" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="53" column="30" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/var/wrong_logs/1/12/121/geo_logs.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+        <state relative-caret-position="102">
+          <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/GeoMetrics.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1688">
+        <state relative-caret-position="-1920">
           <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
           <folding>
             <element signature="e#30#62#0#PHP" expanded="true" />
@@ -937,9 +905,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_data/wrong_logs/1/11/111/geo_logs.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_data/wrong_logs/geo_logs.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_data/clicklogs/geo_logs.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Command/ParseGeoLogs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+          <folding>
+            <element signature="e#32#69#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Repository/GeoMetricsRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state relative-caret-position="187">
           <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
           <folding>
             <element signature="e#34#68#0#PHP" expanded="true" />
@@ -947,10 +938,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/filesystem/Filesystem.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Controller/MetricsControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="88" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="88" />
+          <folding>
+            <element signature="e#50#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_data/no_logs/1/11/111/geo_logs111.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_data/no_logs/dsfsd">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_data/no_logs/1/.332ddsf">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_data/no_logs/2/test.ddd">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/MetricsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="58" column="43" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
+        <state relative-caret-position="556">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
           <folding>
             <element signature="e#35#75#0#PHP" expanded="true" />
           </folding>
@@ -959,10 +979,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Service/FileSystemExtended.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="73" column="13" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
+        <state relative-caret-position="369">
+          <caret line="80" column="7" lean-forward="true" selection-start-line="80" selection-start-column="7" selection-end-line="80" selection-end-column="7" />
           <folding>
             <element signature="e#32#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Service/FileSystemExtendedTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="39" lean-forward="true" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+          <folding>
+            <element signature="e#38#75#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

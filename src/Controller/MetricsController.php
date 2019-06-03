@@ -26,7 +26,6 @@ class MetricsController extends AbstractController
     /**
      * Поддерживаемые разрешения
      */
-    private const GEO_LOGS_EXTENSIONS = ['csv'];
     private const GEO_HEADERS = ['date', 'geo', 'zone', 'impressions', 'revenue'];
     private const GEO_FIELDS_TYPES = [
         'date'        => 'date#YYYY-MM-DD',
@@ -37,6 +36,7 @@ class MetricsController extends AbstractController
     ];
     private const GEO_GROUP_BY_CNT_FIELDS = 3;
 
+    public const GEO_LOGS_EXTENSIONS = ['csv'];
     public const DATA_DELIMITER = ',';
     public const DB_PROCESSING_STEP = 1000;
 
@@ -87,6 +87,13 @@ class MetricsController extends AbstractController
         foreach ($files_descriptors as $file_src) {
             $file_data = [];
             $processing_row = 1;
+
+            if(!$this->file_system->exists($file_src) || $this->file_system->is_dir($file_src)) {
+                $this->error = true;
+                $this->error_messages[] = sprintf("Такого файла не существует %s", $file_src);
+                continue;
+            }
+
             if (($handle = fopen($file_src, "r")) !== false) {
                 while (($row_data = fgetcsv($handle, 1000, self::DATA_DELIMITER)) !== false) {
                     // Если заголовки файла неверно указаны, значит считаем весь файл невалидным
@@ -261,8 +268,10 @@ class MetricsController extends AbstractController
     public function genGroupKey($fields, int $cnt_fields = self::GEO_GROUP_BY_CNT_FIELDS) :string
     {
         $group_key = '';
-        for($i = 0; $i <= $cnt_fields - 1; $i++) {
-            $group_key .= $fields[$i];
+        if(!empty($fields) && count($fields) >= $cnt_fields) {
+            for ($i = 0; $i <= $cnt_fields - 1; $i++) {
+                $group_key .= $fields[$i];
+            }
         }
 
         return $group_key;
